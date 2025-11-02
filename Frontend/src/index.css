@@ -1,3 +1,57 @@
 .nav-link{
     margin-left: 40px;
 }
+#supportHero {
+  background-color: #387ed1;
+  color: white;
+  min-height: 400px;
+}
+
+#supportWrapper h6 {
+  font-weight: 400;
+  color: #e3e3e3;
+}
+
+#supportWrapper h4 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+#supportWrapper input {
+  border-radius: 4px;
+  border: none;
+  height: 40px;
+  padding: 8px 10px;
+}
+
+#supportWrapper .links a {
+  color: white;
+  text-decoration: underline;
+  margin-right: 15px;
+  font-size: 15px;
+}
+
+#supportWrapper .links a:hover {
+  color: #cce0ff;
+}
+
+#supportWrapper ol {
+  padding-left: 20px;
+}
+
+#supportWrapper ol a {
+  color: white;
+  text-decoration: underline;
+}
+
+#trackTickets {
+  display: inline-block;
+  margin-top: 20px;
+  color: white;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+#trackTickets:hover {
+  color: #cce0ff;
+}
