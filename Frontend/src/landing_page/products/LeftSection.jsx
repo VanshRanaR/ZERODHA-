@@ -9,7 +9,7 @@ function LeftSection({
     appStore,
 }) {
     return ( 
-        <div className="container">
+        <div className="container mt-5">
             <div className="row">
                 <div className="col-6 ">
                     <img src={imageURL} />
