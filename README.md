@@ -22,27 +22,27 @@ ZERODHA/
 │ ├── .env<br>
 │ └── model/<br>
 │ ├── UserModel.js<br>
-│ ├── HoldingsModel.js
-│ ├── PositionsModel.js
-│ └── OrdersModel.js
+│ ├── HoldingsModel.js<br>
+│ ├── PositionsModel.js<br>
+│ └── OrdersModel.js<br>
+│<br>
+└── Frontend/<br>
+├── src/<br>
+│ ├── components/<br>
+│ │ ├── Signup.jsx<br>
+│ │ ├── Dashboard.jsx<br>
+│ │ ├── Holdings.jsx<br>
+│ │ ├── Orders.jsx<br>
+│ │ ├── Positions.jsx<br>
+│ │ └── Funds.jsx<br>
+│ ├── landing_page/<br>
+│ │ └── home/<br>
+│ │ └── Hero.jsx<br>
+│ └── index.js<br>
 │
-└── Frontend/
-├── src/
-│ ├── components/
-│ │ ├── Signup.jsx
-│ │ ├── Dashboard.jsx
-│ │ ├── Holdings.jsx
-│ │ ├── Orders.jsx
-│ │ ├── Positions.jsx
-│ │ └── Funds.jsx
-│ ├── landing_page/
-│ │ └── home/
-│ │ └── Hero.jsx
-│ └── index.js
-│
-├── public/
-├── package.json
-└── index.html
+├── public/<br>
+├── package.json<br>
+└── index.html<br>
 
 shell
 Copy code
