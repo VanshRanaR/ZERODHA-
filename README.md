@@ -1,11 +1,4 @@
 
-+3
--1
-Lines changed: 3 additions & 1 deletion
-
-
-Original file line number	Diff line number	Diff line change
-@@ -1,171 +1,173 @@
 # ZERODHA – Trading Dashboard Clone
 DEMO LINK :- https://sparkling-sawine-4bf305.netlify.app/
 DEMO LINK HOME :- https://sparkling-sawine-4bf305.netlify.app/
