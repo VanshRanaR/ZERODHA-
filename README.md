@@ -16,12 +16,12 @@ The project includes user signup, dashboard navigation, and pages such as Holdin
 
 ## Project Structure
 ZERODHA/
-│
-├── Backend/
-│ ├── index.js
-│ ├── .env
-│ └── model/
-│ ├── UserModel.js
+│<br>
+├── Backend/<br>
+│ ├── index.js<br>
+│ ├── .env<br>
+│ └── model/<br>
+│ ├── UserModel.js<br>
 │ ├── HoldingsModel.js
 │ ├── PositionsModel.js
 │ └── OrdersModel.js
