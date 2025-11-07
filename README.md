@@ -1,5 +1,7 @@
 # ZERODHA – Trading Dashboard Clone
-DEMO LINK :- https://sparkling-sawine-4bf305.netlify.app/
+DEMO LINK HOME :- https://sparkling-sawine-4bf305.netlify.app/
+DEMO LINK :- https://kaleidoscopic-profiterole-b4bc55.netlify.app/
+
 ## Overview
 ZERODHA is a full-stack trading dashboard clone built using React (frontend) and Node.js + Express + MongoDB (backend).  
 The project includes user signup, dashboard navigation, and pages such as Holdings, Positions, Orders, Funds, and Apps.
