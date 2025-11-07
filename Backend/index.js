@@ -1,5 +1,6 @@
 require("dotenv").config();
-
+const { UserModel } = require("./model/UserModel");
+const bcrypt = require("bcrypt");
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -187,31 +188,69 @@ app.use(bodyParser.json());
 //   res.send("Done!");
 // });
 
-// app.get("/allHoldings", async (req, res) => {
-//   let allHoldings = await HoldingsModel.find({});
-//   res.json(allHoldings);
-// });
 
-// app.get("/allPositions", async (req, res) => {
-//   let allPositions = await PositionsModel.find({});
-//   res.json(allPositions);
-// });
 
-// app.post("/newOrder", async (req, res) => {
-//   let newOrder = new OrdersModel({
-//     name: req.body.name,
-//     qty: req.body.qty,
-//     price: req.body.price,
-//     mode: req.body.mode,
-//   });
+app.get("/allHoldings", async (req, res) => {
+  let allHoldings = await HoldingsModel.find({});
+  res.json(allHoldings);
+});
 
-//   newOrder.save();
+app.get("/allPositions", async (req, res) => {
+  let allPositions = await PositionsModel.find({});
+  res.json(allPositions);
+});
 
-//   res.send("Order saved!");
-// });
+app.post("/newOrder", async (req, res) => {
+  let newOrder = new OrdersModel({
+    name: req.body.name,
+    qty: req.body.qty,
+    price: req.body.price,
+    mode: req.body.mode,
+  });
+
+  newOrder.save();
+
+  res.send("Order saved!");
+});
 
 app.listen(PORT, () => {
   console.log("App started!");
   mongoose.connect(uri);
   console.log("DB started!");
 });
+app.post("/api/signup", async (req, res) => {
+  try {
+    const { username, email, password } = req.body;
+
+    // Check existing
+    const exists = await UserModel.findOne({ email });
+    if (exists) {
+      return res.json({
+        success: false,
+        message: "Email already registered!"
+      });
+    }
+
+    // Hash password
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // Save user
+    const newUser = new UserModel({
+      username,
+      email,
+      password: hashedPassword
+    });
+
+    await newUser.save();
+
+    res.json({
+      success: true,
+      message: "Signup done!"
+    });
+
+  } catch (err) {
+    console.log(err);
+    res.json({ success: false, message: "Signup failed" });
+  }
+});
+
